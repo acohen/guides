@@ -34,7 +34,8 @@
   * Order assertions from positive to negative
   * Write steps in logical order `Given,And,When,Then`
   * Align step definitions 6 spaces in
-  * Avoid using `before`
+  * Don't use `before` if there's only one assertion
+  * Do use `before` for any repeated steps
   * Use department specific staff
   
 Good `/wt/staff/host_applications/confirm_spec.rb`
