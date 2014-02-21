@@ -2,6 +2,24 @@
 
 ## Acceptance Tests
 
+### User Factories
+
+#### Staff
+
+* Parks and Rec Staff
+
+#### Contacts
+
+* Harry Potter Teachers
+
+#### Employees
+
+* 30 Rock Staff
+
+#### Participants
+
+* Harry Potter Students
+
 ### Spec
 
   * Locate the file based on `department/user/resource/`
@@ -17,7 +35,7 @@
   * Write steps in logical order `Given,And,When,Then`
   * Align step definitions 6 spaces in
   * Avoid using `before`
-  * Use department specific staff `April,Chris,Donna,Tom`
+  * Use department specific staff
   
 Good `/wt/staff/host_applications/confirm_spec.rb`
 
