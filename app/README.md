@@ -37,6 +37,7 @@
   * Don't use `before` if there's only one assertion
   * Do use `before` for any repeated steps
   * Use department specific staff
+  * Place modifiers in the assertion line
   
 Good `/wt/staff/host_applications/confirm_spec.rb`
 
@@ -51,7 +52,7 @@ feature "WT Employee can confirm Host Applications" do
   
   let!(:malfoy)
   
-  it "Kenneth can confirm Malfoy's Host Application" do
+  it "Kenneth can confirm Malfoy's Host Application", :js do
     Given "Kenneth is signed in"
     And   "Kenneth visits Pages On Review Host Applications"
     When  "Kenneth confirms Malfoy's Host Application"
