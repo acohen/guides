@@ -17,12 +17,13 @@
   * Write steps in logical order `Given,And,When,Then`
   * Align step definitions 6 spaces in
   * Avoid using `before`
+  * Use department specific staff `April,Chris,Donna,Tom`
   
 Good `/wt/staff/host_applications/confirm_spec.rb`
 
 ```ruby
 feature "WT Employee can confirm Host Applications" do
-  let!(:leslie)
+  let!(:april)
   
   let!(:pages)
   let!(:kenneth)
