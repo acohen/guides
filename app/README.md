@@ -66,6 +66,7 @@ feature "WT Employee can confirm Host Applications" do
     When  "April visits Pages' Placed Host Applications"
     And   "April sees Pages has Malfoy on Placed"
   end
+end
 ```
 
 ### Steps
