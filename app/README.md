@@ -10,8 +10,8 @@
 eg:  /wt/staff/host_applications/reviewing_spec.rb
 
 ```ruby
-    feature "WT Staff Reviewing Host Applications" do
-      it "Can Decline"
-      it "Can Confirm"
-    end
+feature "WT Staff Reviewing Host Applications" do
+  it "Can Decline"
+  it "Can Confirm"
+end
 ```
