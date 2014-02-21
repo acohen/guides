@@ -107,18 +107,8 @@ Sass
 * Prefer the same file structure that is found in app/views.
 * Avoid having files longer than 100 lines.
 
-CoffeeScript
+Javascript
 ------------
-
-* Avoid conditional modifiers (lines that end with conditionals).
-* Initialize arrays using `[]`.
-* Initialize empty objects and hashes using `{}`.
-* Use hyphen-separated filenames, such as `coffee-script.coffee`.
-* Use `PascalCase` for classes, `lowerCamelCase` for variables and functions,
-  `SCREAMING_SNAKE_CASE` for constants, `_single_leading_underscore` for
-  private variables and functions.
-* Prefer `is` to `== `
-* Prefer `or` and `and` to `||` and `&&`
 
 Ruby
 ----
@@ -152,18 +142,14 @@ Ruby
 * Use `each`, not `for`, for iteration.
 * Use heredocs for multi-line strings.
 
-ERb
----
-
-[Sample](samples/erb.rb)
-
-* When wrapping long lines, keep the method name on the same line as the ERb
-  interpolation operator and keep each method argument on its own line.
-* Prefer double quotes for attributes.
-
-HTML
+Haml
 ----
 
+[Sample](samples/haml.html.haml)
+
+* Use `html.haml` as the extension
+* When wrapping long lines, keep the method name and first argument on the
+  haml interpolation operator and keep each method argument on its own line.
 * Prefer double quotes for attributes.
 
 Rails
@@ -188,21 +174,20 @@ Rails
 Rails Routes
 ------------
 
+* Use the `:only` option to explicitly state exposed routes.
 * Avoid the `:except` option in routes.
 * Order resourceful routes alphabetically by name.
-* Use the `:only` option to explicitly state exposed routes.
+* Use comments to specify the resulting route of namespaces
 
 Background Jobs
 ---------------
 
-* Define a `PRIORITY` constant at the top of delayed job classes.
 * Define two public methods: `self.enqueue` and `perform`.
 * Put delayed job classes in `app/jobs`.
 
 Email
 -----
 
-* Use one `ActionMailer` for the app. Name it `Mailer`.
 * Use the user's name in the `From` header and email in the `Reply-To` when
   [delivering email on behalf of the app's users].
 
@@ -212,7 +197,8 @@ Testing
 -------
 
 * Avoid the `private` keyword in specs.
-* Order ActiveRecord association tests alphabetically by attribute name.
+* Avoid testing ActiveRecord associations
+* Avoid testing ActiveRecord associations
 * Order ActiveRecord validation tests alphabetically by attribute name.
 * Prefer `eq` to `==` in RSpec.
 * Separate setup, exercise, verification, and teardown phases with newlines.
@@ -221,9 +207,9 @@ Testing
 
 [`expect` syntax]: http://myronmars.to/n/dev-blog/2012/06/rspecs-new-expectation-syntax
 
-#### Acceptance Tests
+#### Acceptance Specs
 
-[Sample](samples/acceptance_test.rb)
+[Sample](samples/acceptance_spec.rb)
 
 * Avoid scenario titles that add no information, such as "successfully."
 * Avoid scenario titles that repeat the feature title.
@@ -234,8 +220,8 @@ Testing
   `user_changes_password_spec.rb`, for feature spec file names.
 * Use only one `feature` block per feature spec file.
 * Use scenario titles that describe the success and failure paths.
-* Use spec/features directory to store feature specs.
-* Use spec/support/features for support code related to feature specs.
+* Use spec/acceptance directory to store feature specs.
+* Use spec/support/steps for support code related to feature specs.
 
 #### Factories
 
@@ -243,7 +229,6 @@ Testing
 * Order factory attributes: implicit attributes, explicit attributes,
   child factory definitions. Each section's attributes are alphabetical.
 * Order factory definitions alphabetically by factory name.
-* Use one factories.rb file per project.
 
 #### Unit Tests
 
@@ -252,42 +237,6 @@ Testing
 * Don't prefix `it` block descriptions with 'should'.
 * Name outer `describe` blocks after the method under test. Use `.method`
   for class methods and `#method` for instance methods.
-
-Objective-C
------------
-
-[Sample](samples/ObjectiveC.m)
-
-* `#import` linked frameworks in the prefix header (`ProjectName-Prefix.pch`).
-* Keep `.xib` files grouped with their associated view class.
-* Order `#import` statements alphabetically.
-* Order `@class` directives alphabetically.
-* Order `@property` modifiers: memory management, atomicity, writability.
-* Organize classes into `models`, `views`, `controllers`, `categories`,
-  and `services` directories.
-* Prefer `@class` to `#import` when referring to external classes in a public
-  `@interface`.
-* Prefer `@property` to declaring instance variables.
-* Prefix class names with a 2 or 3 letter project acronym.
-* Prefix string constants being used as keys with 'k'.
-* Remove `#import` statements for `Foundation` and `UIKit` in new project
-  templates.
-* Separate methods by function using `#pragma mark - <Section Name>`
-* Separate sections into subsections using `#pragma mark <Subsection Name>`
-* Use `@[arrayObject]`, `@{@"key" : value}`, `@(YES or NO)`, and `@5.0`
-  literals.
-* Use `@interface ClassName ()` to declare private properties.
-* Use `lowerCamelCase` for method names.
-* Use `NSAssert` in methods that require the presence of certain arguments.
-* Write methods using the happy path. Indent the exceptional cases. Keep the
-  optimal case in the left-most column.
-
-Python
-------
-
-* Follow [PEP 8].
-
-[PEP 8]: http://www.python.org/dev/peps/pep-0008/
 
 Shell
 -----
