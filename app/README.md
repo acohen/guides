@@ -17,7 +17,10 @@
 * 30 Rock Staff
 
 #### Participants
-
+ 
+  * WT 
+    * malfoy@example.com
+  
 * Harry Potter Students
 
 ### Spec
